@@ -1,8 +1,8 @@
 <?php
 
 /*
-		Horrific PHP interface to Cooper-Hewitt API for Dummies
-		by taras				
+		chphp - a PHP interface to Cooper-Hewitt API
+		http://github.com/pidg/chphp/
 		http://twitter.com/tarasyoung
 
 		Gives you the following functions (all return an array, see
