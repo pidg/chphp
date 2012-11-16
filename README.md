@@ -1,5 +1,5 @@
 This is a PHP interface to the Cooper-Hewitt collection API 
-(https://collection.cooperhewitt.org/api/) by me (@tarasyoung).
+(https://collection.cooperhewitt.org/api/) by me (http://twitter.com/tarasyoung).
 
 It contains the following functions, all of which return an array. Use print_r to see the results.
 
