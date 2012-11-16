@@ -3,17 +3,20 @@ This is a PHP interface to the Cooper-Hewitt collection API
 
 It contains the following functions, all of which return an array. Use print_r to see the results.
 
+```
 ch_request(args)              Directly request info from the API
 ch_get(args)                  Send a GET url-style request
 ch_search(query)              Search for things
 ch_object(info_type, object)  Request info on an object
 ch_list(info_type)            Request a list of things of type info_type
 ch_info(info_type, id)        Request info on a thing of info_type
+```
 
 You can find full examples for each function within the code.
 
 Available info_types are:
 
+```
             |   ch_object   ch_list   ch_info |
 ------------+---------------------------------+-------------
 info        |      x                          | info
@@ -26,6 +29,7 @@ role        |                  x         x    | role
 type        |                  x         x    | type
 object      |                            x    | object
 ------------+---------------------------------+-------------
+```
 
 *** License ***
 This program is free software. It comes without any warranty, to
