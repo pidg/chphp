@@ -108,25 +108,25 @@ function ch_search($query)
 		Searches the collection
 		example:	$a = ch_search("sampler");
 	*/
-	
+
 	return ch_get("method=cooperhewitt.search.collection&query=$query");
 
 }
 
-function what_is_what($what)
+function determine_requested_type($inputtype)
 {
-	switch ($what)
+	switch ($inputtype)
 	{
-        case department:     $whatever = "departments"; break;
-        case exhibition:     $whatever = "exhibitions"; break;
-        case periods:        $whatever = "periods"; break;
-        case person:         $whatever = "people"; break;
-        case role:           $whatever = "roles"; break;
-        case type:           $whatever = "types"; break;
-        default:             $whatever = "departments";	
+        case department:     $returntype = "departments"; break;
+        case exhibition:     $returntype = "exhibitions"; break;
+        case periods:        $returntype = "periods"; break;
+        case person:         $returntype = "people"; break;
+        case role:           $returntype = "roles"; break;
+        case type:           $returntype = "types"; break;
+        default:             $returntype = "departments";
     }
 
-	return $whatever;
+	return $returntype;
 }
 
 function ch_object($type, $object)
@@ -160,8 +160,8 @@ function ch_list($what)
 
 	*/
 
-	$whatever = what_is_what($what);
-	return ch_get("method=cooperhewitt.$whatever.getList");
+	$datatype = determine_requested_type($what);
+	return ch_get("method=cooperhewitt.$datatype.getList");
 }
 
 function ch_info($what, $id)
@@ -175,8 +175,8 @@ function ch_info($what, $id)
 
 	*/
 
-	$whatever = what_is_what($what);
-	return ch_get("method=cooperhewitt.$whatever.getInfo&id=$id");
+	$datatype = determine_requested_type($what);
+	return ch_get("method=cooperhewitt.$datatype.getInfo&id=$id");
 }
 
 
